@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     countStudents ++;
                     if(save.isActivated()) {
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
+
                     }
                 }
 
@@ -111,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Ingrese un número de estudiantes válido", Toast.LENGTH_SHORT).show();
             }
+        }
+
+        public void guardar(View view) {
+
         }
 
         public class ObjectToSave {
