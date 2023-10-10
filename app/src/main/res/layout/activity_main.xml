@@ -7,17 +7,17 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvResultado"
+        android:id="@+id/result"
         android:layout_width="328dp"
         android:layout_height="25dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:hint="PROMEDIO DEL ESTUDIANTE ACTUAL"
+        android:hint="PROMEDIO DE LOS ESTUDIANTES"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+        app:layout_constraintTop_toBottomOf="@+id/result"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -41,7 +41,7 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintBottom_toTopOf="@+id/txt6"
         app:layout_constraintEnd_toStartOf="@+id/checkSave"
         app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/txt6"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -231,23 +231,23 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/b1"
+        android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
         android:text="Calcular Promedio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
-        android:id="@+id/textView20"
-        android:layout_width="172dp"
-        android:layout_height="37dp"
+        android:id="@+id/txt6"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
-        android:text="Las notas son de 0 a 5"
+        android:text="Ingrese las notas del estudiante 1 (Las notas son de 0 a 5)"
         android:textColor="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
@@ -270,7 +270,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sí"
-            app:layout_constraintBottom_toTopOf="@+id/b1"
+            app:layout_constraintBottom_toTopOf="@+id/calculate"
             app:layout_constraintEnd_toStartOf="@+id/radioButtonNo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -280,7 +280,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No"
-            app:layout_constraintBottom_toTopOf="@+id/b1"
+            android:checked="true"
+            app:layout_constraintBottom_toTopOf="@+id/calculate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/radioButtonYes"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -292,11 +293,24 @@
         android:layout_height="25dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        android:text="PROMEDIO DE LOS ESTUDIANTES"
+        android:text="PROMEDIO DEL ESTUDIANTE ACTUAL"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentsReprove"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="98dp"
+        android:text="Limpiar Todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 </androidx.constraintlayout.widget.ConstraintLayout>
