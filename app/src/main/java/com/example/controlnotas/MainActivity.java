@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             int numEstudiantes = Integer.parseInt(numEstudiantesText);
-            if(numEstudiantes > 0 && numEstudiantes <= countStudents) {
+            if(numEstudiantes > 0 && numEstudiantes >= countStudents) {
                 double nota1 = Double.parseDouble(text2.getText().toString());
                 double nota2 = Double.parseDouble(text3.getText().toString());
                 double nota3 = Double.parseDouble(text4.getText().toString());
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
                 double notaDefinitiva = (nota1 * 0.20) + (nota2 * 0.30) + (nota3 * 0.15) + (nota4 * 0.35);
 
-                studentsReprove.setText("Nota definitiva estudiante # " + countStudents + " : " + notaDefinitiva);
+                result.setText("Nota definitiva estudiante # " + countStudents + " : " + notaDefinitiva);
 
                 int estudiantesPerdieron = (notaDefinitiva < 3.0) ? 1 : 0;
                 studentsReprove.setText("Estudiantes que han perdido la final: " + estudiantesPerdieron);
